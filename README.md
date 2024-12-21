@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Task Manager Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a simple Task Manager application built using **React.js** and **Redux**. It allows users to add, edit, delete, and filter tasks. Users can also mark tasks as completed or incomplete. The application supports filtering tasks based on their completion status and includes a logout feature.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Hosted Application
 
-### `npm start`
+The application is hosted on GitHub Pages. You can access it here:
+[Task Manager Application](https://harshgoel31.github.io/task-management/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+1. **Add Tasks:** Users can add new tasks with a title.
+2. **Edit Tasks:** Edit the title of existing tasks.
+3. **Delete Tasks:** Remove tasks from the list.
+4. **Mark Tasks as Complete/Incomplete:** Toggle the completion status of tasks.
+5. **Filter Tasks:** Filter tasks based on their status (All, Completed, or Incomplete).
+6. **Logout:** Simulate user logout functionality.
+7. **Optimized Rendering:** The application is optimized using `React.memo`, `useCallback`, and `useMemo` to prevent unnecessary re-renders and enhance performance.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## File Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Components
+- **Login.jsx:** Component for handling user login/register functionality. It manages user credentials and authentication logic.
+- **TaskManager.jsx:** The main component responsible for rendering the Task Manager UI and managing task operations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Redux
+- **tasksSlice.jsx:** Manages the state and actions related to tasks.
+- **userSlice.jsx:** Manages the state and actions related to user authentication (e.g., logout).
+- **store.jsx:** Combines Redux slices and configures the store for the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Technologies Used
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React.js**: Frontend library for building the UI.
+- **Redux**: State management library.
+- **Material-UI (MUI)**: UI components for styling and layout.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Prerequisites
+Make sure you have the following installed on your system:
+- Node.js (v14 or above)
+- npm or yarn
 
-## Learn More
+### Steps
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/HarshGoel31/task-management.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd task-management
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+4. Start the development server:
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
+5. Open the application in your browser:
+   ```
+   http://localhost:3000
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **Add a Task:** Enter a task title in the input field and click the "Add Task" button.
+2. **Mark as Complete/Incomplete:** Click the checkbox icon next to a task to toggle its completion status.
+3. **Edit a Task:** Click the edit icon next to a task, modify the title in the input field, and click "Save."
+4. **Delete a Task:** Click the delete icon next to a task to remove it.
+5. **Filter Tasks:** Use the dropdown to filter tasks by their status (All, Completed, or Incomplete).
+6. **Logout:** Click the "Logout" button to simulate user logout.
