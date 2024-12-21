@@ -6,6 +6,7 @@ import {
   Edit,
   Logout,
   RadioButtonUnchecked,
+  AddTask,
 } from "@mui/icons-material";
 import {
   Box,
@@ -219,18 +220,41 @@ function TaskManager({ taskFilter, setTaskFilter }) {
           <MenuItem value="incomplete">Incomplete</MenuItem>
         </Select>
       </FormControl>
-      <Box sx={{ display: "flex", gap: 2, my: 4 }}>
-        <TextField
-          fullWidth
-          label="New Task"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
-          variant="outlined"
-        />
-        <Button variant="contained" color="primary" onClick={handleAddTask}>
-          Add Task
-        </Button>
-      </Box>
+      <Grid
+        container
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          width: "100%",
+          my: 4,
+        }}
+      >
+        <Grid item xs={10}>
+          <TextField
+            fullWidth
+            label="New Task"
+            value={newTask}
+            onChange={(e) => setNewTask(e.target.value)}
+            variant="outlined"
+          />
+        </Grid>
+        <Grid item xs={2} sx={{ display: "flex", justifyContent: "end" }}>
+          <Button
+            variant="contained"
+            onClick={handleAddTask}
+            startIcon={<AddTask />}
+            sx={{
+              color: "white",
+              "&:hover": {
+                backgroundColor: "#388e3c",
+              },
+            }}
+          >
+            Add Task
+          </Button>
+        </Grid>
+      </Grid>
       <List>
         {filteredTasks.map((task, index) => (
           <TaskItem
